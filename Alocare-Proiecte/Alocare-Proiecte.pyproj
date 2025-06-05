@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2de8f781-a994-447b-be89-b6ab90af1809</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>speed_test.py</StartupFile>
+    <StartupFile>alocare.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

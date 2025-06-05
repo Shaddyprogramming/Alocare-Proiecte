@@ -27,7 +27,7 @@ def preprocess_dataframe(df: pandas.DataFrame) -> pandas.DataFrame:
     :return: Processed DataFrame with new columns for group, domains, and cleaned options.
     """
     df = df.copy() # Create a copy to avoid modifying the original DataFrame
-    df['grupa'] = df['Echipa'].str.split('-', n=1).str[0] # Extract group from 'Echipa' column
+    df['grupa'] = df['Echipa'].str.split('-', n=1).str[0].str[0] # Extract group from 'Echipa' column
     options_clean = df['Optiuni'].fillna('').str.replace(' ', '', regex=False) # Clean 'Optiuni' column by removing spaces and filling NaN values with empty strings
     domains_split = options_clean.str.split(',', expand=True).fillna('') # Split 'Optiuni' into multiple columns based on commas, filling NaN with empty strings
     df['d1'] = domains_split[0].str.split('-', n=1).str[0] # Extract first domain from the split columns
