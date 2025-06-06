@@ -7,18 +7,6 @@ SEED: int = 19032025 # Seed for random allocations
 INPUT_PATH: str = 'data/lp3_proiecte_optiuni.csv' # Input CSV file path
 OUTPUT_PATH: str = 'data/alocari_teme.csv' # Output CSV file path
 
-@jit(cache=True, fastmath=True) # JIT compilation for performance optimization
-def fast_random_choice(arr_size: int, seed_val: int) -> int:
-   """
-   Generate a random index within the range of the array size using a fixed seed.
-
-   :param arr_size: Size of the array to choose from.
-   :param seed_val: Seed value for reproducibility.
-   :return: Random index within the array size.
-   """
-   numpy.random.seed(seed_val) # Set the random seed for reproducibility
-   return numpy.random.randint(0, arr_size) # Generate a random index within the array size
-
 def preprocess_dataframe(df: pandas.DataFrame) -> pandas.DataFrame:
     """
     Preprocess the input DataFrame to extract groups and domains from the 'Echipa' and 'Optiuni' columns.
