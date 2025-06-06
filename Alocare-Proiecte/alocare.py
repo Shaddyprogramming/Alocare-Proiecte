@@ -1,6 +1,5 @@
 ﻿import pandas # library for data manipulation
 import numpy # library for numerical operations
-from numba import jit # JIT compiler for fast execution
 
 SEED: int = 19032025 # Seed for random allocations
 # the seed is the date of the challenge assigned, 19.03.2025
